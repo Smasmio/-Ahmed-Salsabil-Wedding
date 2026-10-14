@@ -95,7 +95,7 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
   <div class="section-inner">
     <div class="rule">✦</div>
     <h2 class="section-title">نستناكم بكل الحب</h2>
-    <p>أحمد & سلسبيل<br>١٦ · ١٠ · ٢٠٢٦</p>
+    <p>أحمد & سلسبيل<br>١٦ / ١٠ / ٢٠٢٦</p>
   </div>
 </section>
 </main>
@@ -154,7 +154,7 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
   musicBtn.addEventListener('click', async () => {
     if (audio.paused) {
       try { await audio.play(); musicBtn.textContent='♫ إيقاف الموسيقى'; musicBtn.setAttribute('aria-pressed','true'); $('music-note').textContent=''; }
-      catch(e) { musicBtn.textContent='♫ أضف ملف الموسيقى أولًا'; }
+      catch(e) { musicBtn.textContent='♫ إيقاف الموسيقى'; }
     } else {
       audio.pause(); musicBtn.textContent='♫ تشغيل الموسيقى'; musicBtn.setAttribute('aria-pressed','false');
     }
