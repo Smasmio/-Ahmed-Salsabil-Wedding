@@ -40,7 +40,7 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
     <div class="eyebrow">بِسْمِ اللَّهِ نَبْدَأُ حِكَايَةً جَدِيدَة</div>
     <div class="bismillah">بسم الله الرحمن الرحيم</div>
     <div class="rule">✦</div>
-    <p class="intro">بكل الحب والفرحة، نتشرف بدعوتكم لمشاركتنا أجمل أيام العمر، وأن تكونوا شهودًا على بداية حكاية جديدة.</p>
+    <p class="intro">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ ﴾<br><small>سورة الروم · الآية ٢١</small></p>
     <h1>أحمد <span class="amp">&</span> سلسبيل</h1>
     <div class="rule">❦</div>
     <div class="date-line">الجمعة · ١٦ أكتوبر ٢٠٢٦</div>
@@ -50,7 +50,6 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
 
 <section id="countdown">
   <div class="section-inner">
-    <div class="kicker">اللحظة المنتظرة</div>
     <h2 class="section-title">باقي على فرحتنا</h2>
     <p class="section-copy">وجودكم هو أجمل هدية، ومستنيينكم تشاركونا فرحتنا ودعواتكم الطيبة.</p>
     <div class="countdown" aria-label="العد التنازلي">
@@ -76,7 +75,6 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
         <a class="btn" href="https://maps.app.goo.gl/rkQpaTAat2naBgNy7?g_st=ac" target="_blank" rel="noopener noreferrer">⌖ افتح الموقع على الخريطة</a>
         <button class="btn secondary" id="calendar-btn" type="button">＋ أضف الموعد للتقويم</button>
       </div>
-      <p class="note">لم يتم تحديد مكان احتفال إضافي حتى الآن.</p>
     </div>
   </div>
 </section>
@@ -90,7 +88,6 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
       <button class="btn" id="share-btn" type="button">♡ شارك الدعوة</button>
       <button class="btn secondary" id="music-btn" type="button" aria-pressed="false">♫ تشغيل الموسيقى</button>
     </div>
-    <p class="note" id="music-note">لتفعيل الموسيقى، أضف ملفًا باسم music.mp3 إلى مجلد الصفحة.</p>
   </div>
 </section>
 
@@ -98,7 +95,7 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
   <div class="section-inner">
     <div class="rule">✦</div>
     <h2 class="section-title">نستناكم بكل الحب</h2>
-    <p>أحمد & سلسبيل<br>١٦ · ١٠ · ٢٠٢٦</p>
+    <p>أحمد & سلسبيل<br>١٦ - ١٠ - ٢٠٢٦</p>
   </div>
 </section>
 </main>
@@ -157,7 +154,7 @@ section{padding:75px 20px}.section-inner{max-width:850px;margin:auto;text-align:
   musicBtn.addEventListener('click', async () => {
     if (audio.paused) {
       try { await audio.play(); musicBtn.textContent='♫ إيقاف الموسيقى'; musicBtn.setAttribute('aria-pressed','true'); $('music-note').textContent=''; }
-      catch(e) { $('music-note').textContent='أضف ملف music.mp3 إلى مجلد الصفحة أولًا لتشغيل الموسيقى.'; }
+      catch(e) { musicBtn.textContent='♫ أضف ملف الموسيقى أولًا'; }
     } else {
       audio.pause(); musicBtn.textContent='♫ تشغيل الموسيقى'; musicBtn.setAttribute('aria-pressed','false');
     }
